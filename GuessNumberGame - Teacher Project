@@ -1,0 +1,27 @@
+import random
+
+# Generate a random number between 1 and 100
+answer = random.randint(1, 100)
+
+# Initialize variables to keep track of the number of guesses and whether the user has won
+guesses = 0
+won = False
+
+# Start the game loop
+while not won:
+    # Get the user's guess
+    guess = int(input("Guess the number between 1 and 100: "))
+
+    # Increase the number of guesses
+    guesses += 1
+
+    # Check if the guess is too high or too low
+    if guess > answer:
+        print("Too high! Guess again.")
+    elif guess < answer:
+        print("Too low! Guess again.")
+    else:
+        won = True
+
+# Inform the user that they have won
+print(f"Congratulations! You guessed the number in {guesses} tries.")
