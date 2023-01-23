@@ -1,0 +1,43 @@
+print('''Welcome to our Theme Park 
+
+These are the available rides:
+
+1. River Rapids Ride
+2. Big Drop Roller Coaster
+3. Underground Tunnel Ride
+4. Mountain Roller Coaster
+5. Water Slide
+''')
+
+rideNumberText = input("please input the ride number that you would like:")
+rideNumber = int(rideNumberText)
+
+while rideNumber < 1 or rideNumber > 5:
+  print('There is no ride with that number.')
+  rideNumberText = input("please input the ride number that you would    like:")
+  rideNumber = int(rideNumberText)
+
+if rideNumber == 1:
+  print('You have selected the River Rapids Ride.')
+  print('There are no age limits for this ride.')
+if rideNumber == 3:
+  print('You have selected the Underground Tunnel Ride.')
+  print('There are no age limits for this ride.')
+if rideNumber == 5:
+  print('You have selected the Water Slide.')
+  print('There are no age limits for this ride.')
+else:
+  ageText = input("Please input your age:")
+  age = int(ageText)
+  if rideNumber == 2:
+    print('You have selected the Big Drop Roller Coaster.')
+    if age >= 3:
+      print('You are old enough for this ride.')
+    else:
+      print('You are too young for this ride.')
+  if rideNumber == 4:
+    print('You have selected the Big Drop Roller Coaster.')
+    if age >= 10:
+      print('You are old enough for this ride.')
+    else:
+      print('You are too young for this ride.')
